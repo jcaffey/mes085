@@ -1,5 +1,6 @@
 # sample output
 
+```shell
 Response: (HTTP 200 - 1625ms) transaction_id=09d2560e9f7c39c3b72d69accdde4e07&error_code=085&auth_response_text=Card Ok&avs_result=0&auth_code=T5776H
 --------------------------------------------------------
 Error code with VERIFY (A) and amount 0.00:
@@ -15,3 +16,4 @@ Response: (HTTP 200 - 1664ms) transaction_id=47c97de7c295443082c5039d9d0495aa&er
 Error code with REFUND (U):
 000
 --------------------------------------------------------
+```
