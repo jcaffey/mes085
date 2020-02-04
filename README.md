@@ -1,19 +1,28 @@
 # sample output
 
 ```shell
-Response: (HTTP 200 - 1625ms) transaction_id=09d2560e9f7c39c3b72d69accdde4e07&error_code=085&auth_response_text=Card Ok&avs_result=0&auth_code=T5776H
+Sending request: profile_id=94100010520200000119&profile_key=BVqARtYICGVFaYiCDBVswkYrNSACUUkD&transaction_type=A&card_exp_date=1022&transaction_amount=0.00&card_number=4485317822240309
+Response: (HTTP 200 - 1967ms) transaction_id=b7b05eb7b27136ac80b15577597ec92a&error_code=085&auth_response_text=Card Ok&avs_result=0&auth_code=T6640H
 --------------------------------------------------------
 Error code with VERIFY (A) and amount 0.00:
 085
 --------------------------------------------------------
-Response: (HTTP 200 - 1332ms) transaction_id=2dd15ec8ee023e678107bff5a66ff361&error_code=000&auth_response_text=Approval T5777H&avs_result=0&auth_code=T5777H
+Sending request: profile_id=94100010520200000119&profile_key=BVqARtYICGVFaYiCDBVswkYrNSACUUkD&transaction_type=D&card_exp_date=1022&transaction_amount=0.85&card_number=4485317822240309
+Response: (HTTP 200 - 1127ms) transaction_id=3b59098ea5583ecd8f3c6499770c456c&error_code=000&auth_response_text=Approval T6641H&avs_result=0&auth_code=T6641H
 --------------------------------------------------------
 Error code with SALE (D) and amount 0.85:
 000
 --------------------------------------------------------
-Response: (HTTP 200 - 1664ms) transaction_id=47c97de7c295443082c5039d9d0495aa&error_code=000&auth_response_text=Refund Request Accepted - Void
+Sending request: profile_id=94100010520200000119&profile_key=BVqARtYICGVFaYiCDBVswkYrNSACUUkD&transaction_type=Z
+Response: (HTTP 200 - 496ms) transaction_id=e64bc4a7323d45b79b9df995bab68912&error_code=000&auth_response_text=Empty Batch
+--------------------------------------------------------
+Error code with BATCHCLOSE (Z)
+000
+--------------------------------------------------------
+Sending request: profile_id=94100010520200000119&profile_key=BVqARtYICGVFaYiCDBVswkYrNSACUUkD&transaction_type=U&transaction_id=e64bc4a7323d45b79b9df995bab68912
+Response: (HTTP 200 - 460ms) transaction_id=d2a744fbe2c14b6e8cd8f93312a5c082&error_code=201&auth_response_text=Invalid Transaction ID
 --------------------------------------------------------
 Error code with REFUND (U):
-000
+201
 --------------------------------------------------------
 ```

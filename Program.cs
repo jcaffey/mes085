@@ -8,14 +8,14 @@ namespace Mes085
         static void Main(string[] args)
         {
             GatewaySettings settings = new GatewaySettings();
-            settings.setCredentials("CHANGE", "ME")
+            settings.setCredentials("", "")
             .setVerbose(true)
             .setHostUrl(GatewaySettings.URL_CERT);
             Gateway gateway = new Gateway(settings);
 
             // run verify to get 085
             GatewayRequest request = new GatewayRequest(GatewayRequest.TransactionType.VERIFY);
-            request.setCardData("4111111111111111", "1221");
+            request.setCardData("4485317822240309", "1022");
             request.setAmount("0.00");
             GatewayResponse response = gateway.run(request);
 
@@ -26,7 +26,7 @@ namespace Mes085
 
             // sale at 0.85
             request = new GatewayRequest(GatewayRequest.TransactionType.SALE);
-            request.setCardData("4111111111111111", "1221");
+            request.setCardData("4485317822240309", "1022");
             request.setAmount("0.85");
             response = gateway.run(request);
             
