@@ -35,6 +35,14 @@ namespace Mes085
             Console.WriteLine(response.getErrorCode());
             Console.WriteLine("--------------------------------------------------------");
 
+            request = new GatewayRequest(GatewayRequest.TransactionType.BATCHCLOSE);
+            response = gateway.run(request);
+
+            Console.WriteLine("--------------------------------------------------------");
+            Console.WriteLine("Error code with BATCHCLOSE (Z)");
+            Console.WriteLine(response.getErrorCode());
+            Console.WriteLine("--------------------------------------------------------");
+
             // Make refund request with transaction id of previous sale...
             // No 085 ... error code is 000
             request = new GatewayRequest(GatewayRequest.TransactionType.REFUND);
